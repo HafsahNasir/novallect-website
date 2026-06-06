@@ -1,4 +1,4 @@
-// Floating WhatsApp button — emphasised contact channel, present on every page.
+// Floating WhatsApp button: emphasised contact channel, present on every page.
 // Replace the number in `href` with the real WhatsApp business number.
 import { motion } from 'framer-motion'
 import './WhatsAppFloat.css'

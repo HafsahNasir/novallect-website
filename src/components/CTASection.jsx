@@ -6,7 +6,7 @@ import './CTASection.css'
 export default function CTASection({
   kicker = 'Ready when you are',
   title = "Let's build what's next for your business.",
-  text = 'Tell us about your goals and our team will map the right ERP, IT or analytics solution — no pressure, no jargon.',
+  text = 'Tell us about your goals and our team will map the right ERP, IT or analytics solution, no pressure, no jargon.',
 }) {
   return (
     <section className="cta section">

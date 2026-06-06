@@ -7,7 +7,7 @@ const steps = [
     n: '01',
     icon: 'users',
     title: 'Discover',
-    text: 'We listen first — understanding your goals, challenges and current systems before recommending anything.',
+    text: 'We listen first, understanding your goals, challenges and current systems before recommending anything.',
   },
   {
     n: '02',
@@ -19,7 +19,7 @@ const steps = [
     n: '03',
     icon: 'rocket',
     title: 'Deliver',
-    text: 'We implement, integrate and train your team — on time, with minimal disruption to your business.',
+    text: 'We implement, integrate and train your team, on time, with minimal disruption to your business.',
   },
   {
     n: '04',

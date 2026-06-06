@@ -16,7 +16,7 @@ export default function ServiceCategories() {
             Three pillars. <span className="text-grad">One trusted partner.</span>
           </h2>
           <p className="section-lead">
-            From SAP-driven ERP to end-to-end IT and decision-ready analytics —
+            From SAP-driven ERP to end-to-end IT and decision-ready analytics,
             everything your business needs to run smarter, under one roof.
           </p>
         </Reveal>

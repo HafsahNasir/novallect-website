@@ -41,7 +41,7 @@ const channels = [
 
 const initial = { name: '', email: '', phone: '', company: '', service: '', message: '' }
 
-// Formspree endpoint — enquiries are delivered to the configured inbox.
+// Formspree endpoint: enquiries are delivered to the configured inbox.
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mbdedwnp'
 
 // Parsed UAE country, used as the initial state before any onChange fires.
@@ -177,7 +177,7 @@ export default function Contact() {
       }
     } catch {
       setSubmitError(
-        'Network error — please check your connection and try again, or reach us by email.'
+        'Network error: please check your connection and try again, or reach us by email.'
       )
     } finally {
       setSubmitting(false)
@@ -190,7 +190,7 @@ export default function Contact() {
         eyebrow="Contact Us"
         title="Let's talk about"
         highlight="your next move."
-        lead="Tell us where you want your business to go. We'll help you get there with the right ERP, IT or analytics solution — starting with a free, no-pressure consultation."
+        lead="Tell us where you want your business to go. We'll help you get there with the right ERP, IT or analytics solution, starting with a free, no-pressure consultation."
       />
 
       <section className="contact section">
@@ -202,7 +202,7 @@ export default function Contact() {
                 <span className="contact__success-icon">
                   <Icon name="check" size={34} />
                 </span>
-                <h2>Thank you — message received!</h2>
+                <h2>Thank you! Message received.</h2>
                 <p>
                   Thanks for reaching out to Novallect. A member of our team will
                   get back to you within one business day.
@@ -350,7 +350,7 @@ export default function Contact() {
           <Reveal delay={0.12} className="contact__aside">
             <h3 className="contact__aside-title">Prefer to reach out directly?</h3>
             <p className="contact__aside-sub">
-              Choose whatever's easiest — we're happy to help however you'd like to
+              Choose whatever's easiest, we're happy to help however you'd like to
               connect.
             </p>
 
@@ -390,7 +390,7 @@ export default function Contact() {
               <Icon name="clock" size={22} />
               <div>
                 <strong>Free 30-minute consultation</strong>
-                <span>No cost, no obligation — just a clear next step.</span>
+                <span>No cost, no obligation, just a clear next step.</span>
               </div>
             </div>
           </Reveal>

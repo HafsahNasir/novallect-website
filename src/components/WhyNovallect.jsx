@@ -6,7 +6,7 @@ const features = [
   {
     icon: 'pin',
     title: 'Built for the Middle East',
-    text: 'We understand how Gulf businesses operate, scale and report — and we tailor solutions to fit the region.',
+    text: 'We understand how Gulf businesses operate, scale and report, and we tailor solutions to fit the region.',
   },
   {
     icon: 'handshake',
@@ -44,7 +44,7 @@ export default function WhyNovallect() {
             <Icon name="handshake" size={16} /> Why Novallect
           </span>
           <h2 className="section-title">
-            A partner that delivers — <span className="text-grad">not just advises.</span>
+            A partner that delivers, <span className="text-grad">not just advises.</span>
           </h2>
           <p className="section-lead">
             "Solutions. Services. Delivered." isn't just a tagline. It's how we

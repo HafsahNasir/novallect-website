@@ -11,12 +11,12 @@ const pillars = [
   {
     icon: 'spark',
     title: 'Our Mission',
-    text: 'To make enterprise-grade ERP, IT and analytics accessible to every ambitious business in the Middle East — delivered with clarity, not complexity.',
+    text: 'To make enterprise-grade ERP, IT and analytics accessible to every ambitious business in the Middle East, delivered with clarity, not complexity.',
   },
   {
     icon: 'rocket',
     title: 'Our Vision',
-    text: 'To be the region\'s most trusted technology partner — the team businesses call first when they want systems that actually work.',
+    text: 'To be the region\'s most trusted technology partner, the team businesses call first when they want systems that actually work.',
   },
   {
     icon: 'handshake',
@@ -42,7 +42,7 @@ export default function About() {
         eyebrow="About Novallect"
         title="Technology partners who"
         highlight="actually deliver."
-        lead="We help startups, SMEs and enterprises across the Gulf modernise with confidence — combining deep SAP & ERP know-how, broad IT capability and sharp analytics under one roof."
+        lead="We help startups, SMEs and enterprises across the Gulf modernise with confidence, combining deep SAP & ERP know-how, broad IT capability and sharp analytics under one roof."
       />
 
       <Stats />
@@ -60,12 +60,12 @@ export default function About() {
             <p>
               Novallect was founded on a simple belief: technology should make
               business easier, not harder. Too many companies are sold complex
-              systems they never fully use — and left to figure out the rest alone.
+              systems they never fully use, and left to figure out the rest alone.
             </p>
             <p>
               We do things differently. With over a decade of combined experience
               across SAP and ERP implementations, IT infrastructure, and business
-              intelligence, our team partners with you end-to-end — from the first
+              intelligence, our team partners with you end-to-end, from the first
               conversation to long after go-live.
             </p>
             <p>

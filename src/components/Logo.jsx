@@ -9,7 +9,7 @@ export default function Logo({ variant = 'dark', height = 34 }) {
   return (
     <img
       src={src}
-      alt="Novallect — Solutions · Services · Delivered"
+      alt="Novallect · Solutions · Services · Delivered"
       height={height}
       style={{ height, width: 'auto', display: 'block' }}
     />

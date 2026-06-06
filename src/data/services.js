@@ -7,7 +7,7 @@ export const serviceCategories = [
     name: 'ERP',
     tagline: 'SAP & business process systems',
     blurb:
-      'End-to-end SAP and ERP services — from first implementation to ongoing support — that streamline how your business actually runs.',
+      'End-to-end SAP and ERP services, from first implementation to ongoing support, that streamline how your business actually runs.',
     icon: 'erp',
     services: [
       { name: 'SAP Implementation', desc: 'Full-cycle SAP rollouts tailored to your processes.' },
@@ -29,7 +29,7 @@ export const serviceCategories = [
     icon: 'it',
     services: [
       { name: 'IT Infrastructure Setup', desc: 'Build a stable, secure technology foundation.' },
-      { name: 'Cloud Solutions & Migration', desc: 'Move to the cloud — securely and cost-effectively.' },
+      { name: 'Cloud Solutions & Migration', desc: 'Move to the cloud, securely and cost-effectively.' },
       { name: 'Custom Software Development', desc: 'Software built around your business needs.' },
       { name: 'Website & Web App Development', desc: 'Fast, modern web experiences that convert.' },
       { name: 'Cybersecurity Solutions', desc: 'Protect your data, systems and reputation.' },
