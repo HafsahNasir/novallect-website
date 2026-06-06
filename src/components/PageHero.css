@@ -82,3 +82,11 @@
   margin-top: 20px;
   max-width: 620px;
 }
+
+/* Freeze the blurred decorative orbs on mobile — see Hero.css for rationale. */
+@media (max-width: 940px) {
+  .pagehero__orb--1,
+  .pagehero__orb--2 {
+    animation: none;
+  }
+}

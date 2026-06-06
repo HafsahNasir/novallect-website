@@ -239,8 +239,10 @@
 .drawer__scrim {
   position: fixed;
   inset: 0;
-  background: rgba(6, 18, 38, 0.5);
-  backdrop-filter: blur(2px);
+  /* Solid overlay only — a backdrop-filter here forces iOS Safari to re-blur
+     the entire viewport every frame while the drawer slides, which tanks the
+     animation on mobile GPUs. The extra opacity compensates for the lost blur. */
+  background: rgba(6, 18, 38, 0.58);
   z-index: 110;
 }
 .drawer {
@@ -256,6 +258,10 @@
   padding: 22px;
   box-shadow: var(--shadow-lg);
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  /* Pre-promote to its own compositor layer so the slide-in transform is
+     handled on the GPU instead of triggering layout/paint each frame. */
+  will-change: transform;
 }
 .drawer__top {
   display: flex;
@@ -347,5 +353,10 @@
   }
   .nav__burger {
     display: inline-flex;
+  }
+  /* A 16px backdrop blur is recomputed on every scroll frame — too heavy for
+     mobile GPUs. A smaller radius reads almost identically at this size. */
+  .nav--solid {
+    backdrop-filter: blur(8px);
   }
 }

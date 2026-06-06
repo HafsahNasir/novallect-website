@@ -230,3 +230,16 @@
     margin-top: 50px;
   }
 }
+
+/* On phones these large blurred decorative layers (blur 30–70px) are barely
+   visible but animating them forever keeps the GPU pinned, which makes
+   scrolling and the menu drawer stutter. Freeze them — the gradients still
+   show, they just stop moving. */
+@media (max-width: 940px) {
+  .hero__orbit--1,
+  .hero__orbit--2,
+  .hero__blob--1,
+  .hero__blob--2 {
+    animation: none;
+  }
+}
