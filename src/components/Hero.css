@@ -1,0 +1,232 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: radial-gradient(120% 120% at 50% -10%, #123057 0%, #0a1830 45%, #061226 100%);
+  color: var(--on-dark);
+  padding: 168px 0 120px;
+  isolation: isolate;
+}
+
+/* ---- background layers ---- */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.hero__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(159, 180, 207, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(159, 180, 207, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  mask-image: radial-gradient(110% 80% at 50% 0%, #000 0%, transparent 70%);
+  -webkit-mask-image: radial-gradient(110% 80% at 50% 0%, #000 0%, transparent 70%);
+}
+
+/* orbital rings */
+.hero__orbit {
+  position: absolute;
+  left: 50%;
+  top: -38%;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    rgba(79, 208, 224, 0.0) 40deg,
+    rgba(79, 208, 224, 0.55) 130deg,
+    rgba(37, 99, 176, 0.6) 220deg,
+    rgba(79, 208, 224, 0.0) 320deg,
+    transparent 360deg
+  );
+  filter: blur(46px);
+  opacity: 0.7;
+}
+.hero__orbit--1 {
+  width: 1100px;
+  height: 1100px;
+  animation: spin-slow 28s linear infinite;
+}
+.hero__orbit--2 {
+  width: 720px;
+  height: 720px;
+  top: -22%;
+  filter: blur(30px);
+  opacity: 0.55;
+  animation: spin-slow 20s linear infinite reverse;
+}
+
+/* dark core so the ring reads as a halo */
+.hero__glow {
+  position: absolute;
+  left: 50%;
+  top: -8%;
+  translate: -50% 0;
+  width: 560px;
+  height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #0a1830 36%, transparent 70%);
+}
+
+/* soft colour blobs */
+.hero__blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.5;
+}
+.hero__blob--1 {
+  width: 380px;
+  height: 380px;
+  left: -80px;
+  bottom: -60px;
+  background: radial-gradient(circle, rgba(27, 78, 155, 0.6), transparent 70%);
+  animation: float-slow 11s ease-in-out infinite;
+}
+.hero__blob--2 {
+  width: 320px;
+  height: 320px;
+  right: -60px;
+  top: 40%;
+  background: radial-gradient(circle, rgba(27, 165, 196, 0.5), transparent 70%);
+  animation: float-rev 13s ease-in-out infinite;
+}
+
+/* ---- content ---- */
+.hero__inner {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  padding: 9px 16px;
+  border-radius: 999px;
+  color: var(--cyan-300);
+  background: rgba(79, 208, 224, 0.08);
+  border: 1px solid rgba(79, 208, 224, 0.25);
+  box-shadow: 0 0 30px rgba(79, 208, 224, 0.15) inset;
+}
+
+.hero__title {
+  color: #fff;
+  font-size: clamp(40px, 6.4vw, 78px);
+  font-weight: 700;
+  margin-top: 26px;
+  letter-spacing: -0.03em;
+}
+
+.hero__lead {
+  max-width: 660px;
+  margin-top: 24px;
+  font-size: clamp(16px, 2vw, 19px);
+  color: var(--on-dark-dim);
+}
+
+.hero__actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 38px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero__trust {
+  margin-top: 70px;
+  width: 100%;
+}
+.hero__trust-label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(157, 180, 207, 0.7);
+}
+.hero__logos {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(22px, 5vw, 60px);
+  flex-wrap: wrap;
+}
+.hero__logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(15px, 2vw, 20px);
+  letter-spacing: 0.05em;
+  color: rgba(234, 242, 251, 0.45);
+  transition: color 0.3s;
+}
+.hero__logo:hover {
+  color: rgba(234, 242, 251, 0.9);
+}
+
+/* ---- floating glass cards ---- */
+.hero__fcard {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-radius: 16px;
+  background: rgba(18, 38, 70, 0.55);
+  border: 1px solid rgba(159, 180, 207, 0.18);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-dark);
+}
+.hero__fcard strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  color: #fff;
+}
+.hero__fcard span {
+  display: block;
+  font-size: 12px;
+  color: var(--on-dark-dim);
+  margin-top: 1px;
+}
+/* selector qualified with .hero__fcard so it outranks `.hero__fcard span`
+   (which would otherwise force display:block and break centering) */
+.hero__fcard .hero__fcard-icon {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: #fff;
+  background: var(--grad-brand);
+}
+
+.fc--tl { left: 4%;  top: 26%;  animation: float-slow 9s ease-in-out infinite; }
+.fc--tr { right: 4%; top: 20%;  animation: float-rev 10s ease-in-out infinite; }
+.fc--bl { left: 7%;  bottom: 20%; animation: float-rev 11s ease-in-out infinite; }
+.fc--br { right: 6%; bottom: 16%; animation: float-slow 12s ease-in-out infinite; }
+
+@media (max-width: 1180px) {
+  .hero__fcard { display: none; }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 130px 0 84px;
+  }
+  .hero__trust {
+    margin-top: 50px;
+  }
+}

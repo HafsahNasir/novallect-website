@@ -1,0 +1,305 @@
+.contact__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* ---- Form ---- */
+.contact__formwrap {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+}
+.contact__form-title {
+  font-size: 26px;
+  font-weight: 700;
+}
+.contact__form-sub {
+  color: var(--ink-500);
+  margin-top: 8px;
+  margin-bottom: 28px;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+.field label {
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  color: var(--ink-700);
+  margin-bottom: 8px;
+}
+.field input,
+.field select,
+.field textarea {
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink-900);
+  padding: 13px 15px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  width: 100%;
+  resize: vertical;
+}
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--ink-300);
+}
+/* a select has no ::placeholder, so grey it out while the empty option is shown */
+.field select.is-placeholder {
+  color: var(--ink-300);
+}
+.field select.is-placeholder option {
+  color: var(--ink-900);
+}
+.field input:focus,
+.field select:focus,
+.field textarea:focus {
+  outline: none;
+  background: #fff;
+  border-color: var(--teal-500);
+  box-shadow: 0 0 0 4px rgba(27, 165, 196, 0.12);
+}
+.field .is-error {
+  border-color: #e05260;
+  box-shadow: 0 0 0 4px rgba(224, 82, 96, 0.1);
+}
+.field-err {
+  color: #d63a4a;
+  font-size: 12.5px;
+  margin-top: 6px;
+}
+
+/* ---- Phone input (react-international-phone) ---- */
+.phone-intl-wrap {
+  position: relative;
+}
+/* "Fill in the blanks" ghost mask: the typed part is invisible (it only
+   reserves width) and the remaining slots are drawn in muted grey, aligned
+   under where the next digit will land. */
+.phone-ghost {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  white-space: pre;
+  overflow: hidden;
+  pointer-events: none;
+}
+.phone-ghost__filled {
+  visibility: hidden;
+}
+.phone-ghost__blank {
+  color: var(--ink-300);
+}
+/* Theme the library to match the rest of the form via its CSS variables. */
+.phone-intl {
+  --react-international-phone-height: 48px;
+  --react-international-phone-font-size: 15px;
+  --react-international-phone-border-radius: var(--radius-sm);
+  --react-international-phone-border-color: var(--line);
+  --react-international-phone-background-color: var(--paper);
+  --react-international-phone-text-color: var(--ink-900);
+  --react-international-phone-country-selector-background-color: var(--paper);
+  --react-international-phone-country-selector-background-color-hover: #eef4f6;
+  --react-international-phone-selected-dropdown-item-background-color: #eef4f6;
+  --react-international-phone-dropdown-item-font-size: 14px;
+  width: 100%;
+  font-family: var(--font-body);
+  border-radius: var(--radius-sm);
+  transition: box-shadow 0.2s;
+}
+/* give the flag breathing room on the left so it isn't cramped on the border */
+.phone-intl .react-international-phone-country-selector-button {
+  width: auto;
+  padding-left: 14px;
+  padding-right: 8px;
+  gap: 6px;
+}
+/* number input takes the remaining width */
+.phone-intl .react-international-phone-input {
+  width: 100%;
+  font-family: var(--font-body);
+  letter-spacing: 0.02em;
+  padding-left: 12px;
+}
+/* shared focus ring around the whole control */
+.phone-intl:focus-within {
+  box-shadow: 0 0 0 4px rgba(27, 165, 196, 0.12);
+}
+.phone-intl:focus-within .react-international-phone-country-selector-button,
+.phone-intl:focus-within .react-international-phone-input {
+  border-color: var(--teal-500);
+}
+/* error state mirrors .field .is-error */
+.phone-intl.is-error {
+  box-shadow: 0 0 0 4px rgba(224, 82, 96, 0.1);
+}
+.phone-intl.is-error .react-international-phone-country-selector-button,
+.phone-intl.is-error .react-international-phone-input {
+  border-color: #e05260;
+}
+
+.contact__submit {
+  width: 100%;
+  margin-top: 6px;
+}
+.contact__submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+.contact__submit-error {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  background: rgba(224, 82, 96, 0.08);
+  border: 1px solid rgba(224, 82, 96, 0.3);
+  color: #c0303f;
+  font-size: 13.5px;
+}
+.contact__privacy {
+  margin-top: 14px;
+  font-size: 12.5px;
+  color: var(--ink-300);
+  text-align: center;
+}
+
+/* ---- Success ---- */
+.contact__success {
+  text-align: center;
+  padding: 30px 10px;
+}
+.contact__success-icon {
+  display: grid;
+  place-items: center;
+  width: 76px;
+  height: 76px;
+  margin: 0 auto 22px;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--grad-brand);
+  box-shadow: 0 16px 34px rgba(27, 165, 196, 0.4);
+}
+.contact__success h2 {
+  font-size: 26px;
+}
+.contact__success p {
+  color: var(--ink-500);
+  margin: 14px auto 26px;
+  max-width: 380px;
+}
+
+/* ---- Aside / channels ---- */
+.contact__aside-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+.contact__aside-sub {
+  color: var(--ink-500);
+  margin-top: 10px;
+  margin-bottom: 24px;
+}
+
+.contact__channels {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact__channel {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease),
+    border-color 0.25s var(--ease);
+}
+a.contact__channel:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(27, 165, 196, 0.4);
+}
+.contact__ch-icon {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  color: var(--teal-500);
+  background: rgba(27, 165, 196, 0.1);
+}
+.contact__ch-text {
+  display: flex;
+  flex-direction: column;
+}
+.contact__ch-label {
+  font-size: 12.5px;
+  color: var(--ink-300);
+  font-weight: 500;
+}
+.contact__ch-value {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink-900);
+  margin-top: 1px;
+}
+.contact__ch-note {
+  font-size: 12.5px;
+  color: var(--ink-500);
+  margin-top: 3px;
+}
+
+.contact__cta-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: var(--radius);
+  color: #fff;
+  background: linear-gradient(135deg, var(--blue-600), var(--teal-500));
+  box-shadow: 0 14px 30px rgba(27, 78, 155, 0.3);
+}
+.contact__cta-card strong {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 16px;
+}
+.contact__cta-card span {
+  display: block;
+  font-size: 13.5px;
+  opacity: 0.92;
+  margin-top: 2px;
+}
+
+@media (max-width: 920px) {
+  .contact__grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 560px) {
+  .contact__formwrap {
+    padding: 26px 20px;
+  }
+  .field-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

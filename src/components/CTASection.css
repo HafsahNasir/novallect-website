@@ -1,0 +1,93 @@
+.cta__panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-xl);
+  background: radial-gradient(120% 130% at 0% 0%, #143058 0%, #0a1830 50%, #061226 100%);
+  padding: clamp(48px, 7vw, 88px);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+}
+
+.cta__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.cta__grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(159, 180, 207, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(159, 180, 207, 0.07) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: radial-gradient(100% 100% at 50% 0%, #000, transparent 75%);
+  -webkit-mask-image: radial-gradient(100% 100% at 50% 0%, #000, transparent 75%);
+}
+.cta__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+.cta__orb--1 {
+  width: 360px;
+  height: 360px;
+  top: -120px;
+  right: -60px;
+  background: radial-gradient(circle, rgba(79, 208, 224, 0.5), transparent 70%);
+  animation: float-slow 12s ease-in-out infinite;
+}
+.cta__orb--2 {
+  width: 300px;
+  height: 300px;
+  bottom: -120px;
+  left: -40px;
+  background: radial-gradient(circle, rgba(27, 78, 155, 0.6), transparent 70%);
+  animation: float-rev 14s ease-in-out infinite;
+}
+
+.cta__content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta__kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-display);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--cyan-300);
+  padding: 8px 15px;
+  border-radius: 999px;
+  background: rgba(79, 208, 224, 0.08);
+  border: 1px solid rgba(79, 208, 224, 0.25);
+}
+
+.cta__title {
+  color: #fff;
+  font-size: clamp(28px, 4.4vw, 48px);
+  font-weight: 700;
+  margin-top: 22px;
+  max-width: 720px;
+}
+
+.cta__text {
+  color: var(--on-dark-dim);
+  font-size: 18px;
+  margin-top: 18px;
+  max-width: 560px;
+}
+
+.cta__actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 34px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

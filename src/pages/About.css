@@ -1,0 +1,106 @@
+.about__story {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.about__story-text .section-title {
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+.about__story-text p {
+  color: var(--ink-500);
+  font-size: 16.5px;
+  margin-top: 18px;
+}
+
+.about__values {
+  background: linear-gradient(160deg, var(--navy-800), var(--navy-950));
+  border-radius: var(--radius-lg);
+  padding: 36px 32px;
+  color: #fff;
+  position: sticky;
+  top: 100px;
+  box-shadow: var(--shadow-lg);
+}
+.about__values h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 22px;
+}
+.about__values ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.about__values li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15.5px;
+  color: var(--on-dark);
+}
+.about__values svg {
+  color: var(--cyan-400);
+  flex-shrink: 0;
+}
+
+/* pillars */
+.about-pillars {
+  background: var(--paper);
+}
+.about-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.about-pillar {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 34px 30px;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+}
+.about-pillar:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+.about-pillar__icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 15px;
+  color: #fff;
+  background: var(--grad-brand);
+  box-shadow: 0 12px 26px rgba(27, 78, 155, 0.3);
+  margin-bottom: 20px;
+}
+.about-pillar h3 {
+  font-size: 21px;
+  font-weight: 600;
+}
+.about-pillar p {
+  margin-top: 12px;
+  color: var(--ink-500);
+  font-size: 15px;
+}
+
+@media (max-width: 920px) {
+  .about__story {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .about__values {
+    position: static;
+  }
+  .about-pillars__grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-inline: auto;
+  }
+}
