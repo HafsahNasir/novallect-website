@@ -1,0 +1,13 @@
+{
+  "name": "Novallect",
+  "short_name": "Novallect",
+  "description": "ERP, IT Solutions & Analytics for businesses across the Middle East.",
+  "icons": [
+    { "src": "/favicon.svg", "type": "image/svg+xml", "sizes": "any" },
+    { "src": "/apple-touch-icon.png", "type": "image/png", "sizes": "180x180" },
+    { "src": "/favicon-512.png", "type": "image/png", "sizes": "512x512" }
+  ],
+  "theme_color": "#0b1b30",
+  "background_color": "#0b1b30",
+  "display": "standalone"
+}

@@ -4,6 +4,7 @@ import WhyNovallect from '../components/WhyNovallect'
 import CTASection from '../components/CTASection'
 import Reveal from '../components/Reveal'
 import Icon from '../components/Icon'
+import usePageTitle from '../hooks/usePageTitle'
 import './About.css'
 
 const pillars = [
@@ -34,6 +35,7 @@ const values = [
 ]
 
 export default function About() {
+  usePageTitle('About')
   return (
     <>
       <PageHero

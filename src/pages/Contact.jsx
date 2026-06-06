@@ -5,6 +5,7 @@ import PageHero from '../components/PageHero'
 import Reveal from '../components/Reveal'
 import Icon from '../components/Icon'
 import { serviceCategories } from '../data/services'
+import usePageTitle from '../hooks/usePageTitle'
 import './Contact.css'
 
 const channels = [
@@ -69,6 +70,7 @@ const activeMask = (country, nationalDigits) => {
 }
 
 export default function Contact() {
+  usePageTitle('Contact')
   const [form, setForm] = useState(initial)
   // Currently selected country, so validation knows the dial-code length and the
   // ghost mask knows which format template to show.

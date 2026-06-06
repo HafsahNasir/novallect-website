@@ -5,9 +5,11 @@ import CTASection from '../components/CTASection'
 import Reveal from '../components/Reveal'
 import Icon from '../components/Icon'
 import { serviceCategories } from '../data/services'
+import usePageTitle from '../hooks/usePageTitle'
 import './Services.css'
 
 export default function Services() {
+  usePageTitle('Services')
   const { hash } = useLocation()
 
   // Scroll to the right category when arriving via /services#erp etc.
