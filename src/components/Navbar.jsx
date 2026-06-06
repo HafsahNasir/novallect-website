@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Logo from './Logo'
@@ -160,10 +161,15 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* ---------- Mobile drawer ---------- */}
-      <AnimatePresence>
-        {mobileOpen && (
-          <>
+      {/* ---------- Mobile drawer ----------
+         Rendered into <body> via a portal so it isn't trapped inside the
+         nav's containing block. `.nav--solid` uses backdrop-filter, which
+         makes the nav a containing block for fixed children — without the
+         portal the drawer would collapse to the nav's height on inner pages. */}
+      {createPortal(
+        <AnimatePresence>
+          {mobileOpen && (
+            <>
             <motion.div
               className="drawer__scrim"
               initial={{ opacity: 0 }}
@@ -257,8 +263,10 @@ export default function Navbar() {
               </Link>
             </motion.aside>
           </>
-        )}
-      </AnimatePresence>
+          )}
+        </AnimatePresence>,
+        document.body,
+      )}
     </header>
   )
 }
