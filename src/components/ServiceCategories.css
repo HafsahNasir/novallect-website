@@ -12,7 +12,7 @@
 
 .svc__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 26px;
 }
 
@@ -110,6 +110,12 @@
 .svc__card-link:hover {
   gap: 12px;
   color: var(--teal-500);
+}
+
+@media (max-width: 1180px) {
+  .svc__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 980px) {

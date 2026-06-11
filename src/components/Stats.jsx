@@ -2,13 +2,12 @@ import Counter from './Counter'
 import Reveal from './Reveal'
 import './Stats.css'
 
-// NOTE: Replace the "X+" placeholders below with real figures when ready.
 // Items with a numeric `value` animate; items with `placeholder` render as-is.
 const stats = [
-  { value: 10, suffix: '+', label: 'Years of combined experience' },
-  { placeholder: 'X+', label: 'Projects delivered' },
-  { placeholder: 'X+', label: 'Businesses supported' },
-  { placeholder: 'X+', label: 'Industries served' },
+  { value: 30, suffix: '+', label: 'Years of combined experience' },
+  { value: 10, suffix: '+', label: 'Projects delivered' },
+  { value: 15, suffix: '+', label: 'Businesses supported' },
+  { value: 8, suffix: '+', label: 'Industries served' },
 ]
 
 export default function Stats() {

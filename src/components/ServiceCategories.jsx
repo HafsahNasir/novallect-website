@@ -13,11 +13,12 @@ export default function ServiceCategories() {
             <Icon name="spark" size={15} /> What we do
           </span>
           <h2 className="section-title">
-            Three pillars. <span className="text-grad">One trusted partner.</span>
+            Four pillars. <span className="text-grad">One trusted partner.</span>
           </h2>
           <p className="section-lead">
-            From SAP-driven ERP to end-to-end IT and decision-ready analytics,
-            everything your business needs to run smarter, under one roof.
+            From SAP-driven ERP and end-to-end IT to decision-ready analytics and
+            expert consulting, everything your business needs to run smarter, under
+            one roof.
           </p>
         </Reveal>
 

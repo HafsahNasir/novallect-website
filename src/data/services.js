@@ -56,4 +56,42 @@ export const serviceCategories = [
       { name: 'Forecasting & Performance Analysis', desc: 'Plan ahead with data-backed forecasts.' },
     ],
   },
+  {
+    id: 'consulting',
+    name: 'Consulting',
+    tagline: 'Value Added Services',
+    blurb:
+      'In collaboration with our trusted partners, we extend a range of value-added services to support our clients beyond core business solutions.',
+    icon: 'handshake',
+    services: [
+      {
+        name: 'Workflow Design & Process Documentation',
+        desc: 'We help organizations design, improve, and document their current and future workflows, making business processes clearer, smoother, and easier to manage.',
+      },
+      {
+        name: 'Project Management Services',
+        desc: 'Our experienced team supports clients in planning, managing, and implementing projects effectively from start to finish.',
+      },
+      {
+        name: 'Outsourced Accounting & Bookkeeping',
+        desc: 'We help businesses maintain accurate and organized books of accounts using modern ERP systems, including SAP, so financial records remain clear and reliable.',
+      },
+      {
+        name: 'Business Process Optimization',
+        desc: 'We identify gaps, delays, and inefficiencies in existing processes and recommend practical solutions to improve overall business performance.',
+      },
+      {
+        name: 'Chart of Accounts Services',
+        desc: 'We provide customized Chart of Accounts services to help businesses organize financial transactions, generate ledger reports, and prepare accurate balance sheets.',
+      },
+      {
+        name: 'Tax Services',
+        desc: 'We provide tax support including VAT return filing, VAT reconciliation with trial balance, internal VAT audits, e-invoicing, and related compliance services.',
+      },
+      {
+        name: 'Feasibility Study Services',
+        desc: 'We prepare feasibility studies to help businesses assess new projects through market analysis, cost estimates, financial projections, risk review, and profitability assessment.',
+      },
+    ],
+  },
 ]

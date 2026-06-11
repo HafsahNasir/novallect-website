@@ -1,5 +1,7 @@
 import PageHero from '../components/PageHero'
 import Stats from '../components/Stats'
+import Leadership from '../components/Leadership'
+import Partners from '../components/Partners'
 import WhyNovallect from '../components/WhyNovallect'
 import CTASection from '../components/CTASection'
 import Reveal from '../components/Reveal'
@@ -105,6 +107,10 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      <Leadership />
+
+      <Partners />
 
       <WhyNovallect />
       <CTASection />

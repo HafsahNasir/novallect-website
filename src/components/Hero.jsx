@@ -103,7 +103,7 @@ export default function Hero() {
             Trusted by ambitious businesses across the Gulf
           </span>
           <div className="hero__logos">
-            {['NEXORA', 'GULFLINE', 'ARRAY', 'MERIDIAN', 'VANTAGE'].map((n) => (
+            {['INNOVATION', 'EFFICIENCY', 'SCALABILITY', 'COMPLIANCE', 'GROWTH'].map((n) => (
               <span key={n} className="hero__logo">
                 {n}
               </span>

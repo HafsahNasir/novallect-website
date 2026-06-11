@@ -32,7 +32,7 @@ export default function Services() {
         eyebrow="Our Services"
         title="Everything your business needs to"
         highlight="run smarter."
-        lead="Three connected service pillars (ERP, IT Solutions and Analysis) delivered by one team that owns the outcome from start to finish."
+        lead="Four connected service pillars (ERP, IT Solutions, Analysis and Consulting) delivered by one team that owns the outcome from start to finish."
       />
 
       {/* quick category nav */}
@@ -95,7 +95,7 @@ export default function Services() {
       <CTASection
         kicker="One partner, every pillar"
         title="Not sure which service you need?"
-        text="Tell us your goal and we'll recommend the right mix of ERP, IT and analytics, with a clear plan and no obligation."
+        text="Tell us your goal and we'll recommend the right mix of ERP, IT, analytics and consulting, with a clear plan and no obligation."
       />
     </>
   )

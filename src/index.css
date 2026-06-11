@@ -118,12 +118,12 @@ p {
 }
 
 .section {
-  padding-block: 110px;
+  padding-block: 88px;
 }
 
 @media (max-width: 768px) {
   .section {
-    padding-block: 72px;
+    padding-block: 60px;
   }
 }
 
