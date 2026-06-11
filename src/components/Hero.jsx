@@ -1,7 +1,16 @@
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Icon from './Icon'
+import fertiglobe from '../assets/clients/fertiglobe.png'
+import mianGroup from '../assets/clients/mian-group.png'
+import anwaarGroup from '../assets/clients/anwaar-group.webp'
 import './Hero.css'
+
+const clientLogos = [
+  { src: fertiglobe, name: 'Fertiglobe', h: 54 },
+  { src: mianGroup, name: 'Mian International', h: 42 },
+  { src: anwaarGroup, name: 'Anwaar Group', h: 56 },
+]
 
 const floatCards = [
   { icon: 'erp', title: 'SAP & ERP', sub: 'Implemented & supported', cls: 'fc--tl' },
@@ -100,12 +109,17 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.5 }}
         >
           <span className="hero__trust-label">
-            Trusted by ambitious businesses across the Gulf
+            Enabling growth for businesses across the Gulf and beyond
           </span>
           <div className="hero__logos">
-            {['INNOVATION', 'EFFICIENCY', 'SCALABILITY', 'COMPLIANCE', 'GROWTH'].map((n) => (
-              <span key={n} className="hero__logo">
-                {n}
+            {clientLogos.map((c) => (
+              <span key={c.name} className="hero__logo">
+                <img
+                  src={c.src}
+                  alt={c.name}
+                  loading="lazy"
+                  style={{ maxHeight: `${c.h}px` }}
+                />
               </span>
             ))}
           </div>
