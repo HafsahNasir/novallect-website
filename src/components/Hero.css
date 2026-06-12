@@ -171,7 +171,7 @@
 .hero__logo img {
   display: block;
   width: auto;
-  max-width: 168px;
+  max-width: 190px;
   max-height: 42px;
   object-fit: contain;
   /* Flatten each multicolour logo to a single white silhouette so it

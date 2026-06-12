@@ -21,7 +21,7 @@ const leaders = [
     ],
   },
   {
-    name: 'Anwaar Pervaiz',
+    name: 'Anwaar Awan',
     role: 'Director Admin & Legal',
     photo: anwaar,
     tags: ['KAU Jeddah', 'Arabic Fluent', 'GCC Networks'],
